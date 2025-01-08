@@ -4,8 +4,11 @@ def decimal_to_binary(num):
     # Some decimal to binary magic
 
 def binary_to_decimal(num):
-    return int(num.lstrip(0), 2) # Removes the leading 0s and converts the number into base2 aka binary
+    num = int(num)
+    num = num.lstrip()    
+    return int(num, 2) # Removes the leading 0s and converts the number into base2 aka binary
     # Floor it too
+    # Fix it too
 
 def check_if_binary(num):
     
