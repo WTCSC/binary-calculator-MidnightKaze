@@ -54,11 +54,30 @@ def binary_calculator(bin1, bin2, operator):
     # Else continues by converting the binary values in decimals.
     num1 = binary_to_decimal(bin1)
     num2 = binary_to_decimal(bin2)
+    
+    # Proceeds with doing the actual operations.
+    if operator == "*":
+        result = num1 * num2
+    
+    # Integrated a dividing by 0 check here.
+    elif operator == "/":
+        if num2 == 0:
+            return "NaN"
+        result = num1 // num2
+    elif operator == "+":
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
+
+    return (decimal_to_binary(result).zfill(8))
+
+
+    
+print(binary_calculator("00000100", "00000010", "/"))
+
+
 
     # Checks if the denominator of a division problem is 0. Throws an error if it it.
     # Will integrate it into the actual thing later on.
-    if num2 == 0 and operator == '/':
-        return "NaN"
-    
-print(binary_calculator("00001110", "00000000", "/"))
-    
+    #if num2 == 0 and operator == '/':
+    #   return "NaN"
