@@ -4,7 +4,7 @@ def decimal_to_binary(num):
     # The binary for 0 is 0, so obviously it should just return 0.
     if num == 0: 
         return 0
-    
+
     # Checks to make sure the resulting binary number will be an 8 digit one.
     if num > 255 or num < 0:
         return "Cannot use numbers outside of the eight digit binary range. Please use a number inside this range: [0,255]"
@@ -34,16 +34,6 @@ def binary_to_decimal(num):
     # Floors the number and turns it into a base 2 integer - binary.
     return math.floor(int(num, 2))
 
-def check_if_decimal(num):
-    status = False
-
-    for x in num:
-        if x in "0123456789":
-            status = True
-    
-    if len(num) < 8 and status == True:
-        return True
-
 
 def check_if_binary(num):
     # Checks for an empty string
@@ -60,6 +50,7 @@ def check_if_binary(num):
 
 
 def binary_calculator(bin1, bin2, operator):
+
     # Starts by checking each number to ensure the starting input is actually binary.
     if check_if_binary(bin1) == False:
         return "Error"
@@ -90,5 +81,3 @@ def binary_calculator(bin1, bin2, operator):
 
     # Turns the decimal back into binary (as a string) while also adding any necessary leading 0s.
     return (str(decimal_to_binary(result)).zfill(8))
-
-print (decimal_to_binary(12))
