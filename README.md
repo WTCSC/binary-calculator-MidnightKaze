@@ -17,7 +17,7 @@ This calculator can perform the 4 basic operations in math: multiplication, divi
 
     - __operation__, choose either multiplication (*), divison (/), addition (+), or subtraction(-) to act as the desired operation of the equation.
     
-    __*Do note that bin1 and bin2 must be passed in as strings, but bin1 and bin2 do not have to be in binary as the calculator is able to convert a decimal into binary for you! Nifty hmm?*__
+    __*Do note that bin1 and bin2 must be passed in as strings and it's expected that the string passed is in binary. Only 1s and 0s with any number of digits.*__
 
 ## Error Detection
 
