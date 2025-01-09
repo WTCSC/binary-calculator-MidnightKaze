@@ -10,14 +10,24 @@ This calculator can perform the 4 basic operations in math: multiplication, divi
 ## How to Use
 
 1. Simply download the calculator.py file and import it into a project, VScode, or anywhere else you see fit.
-2. Call the binary_calculator function, which will take in three arguments:
+2. Call the *binary_calculator* function, which will take in three arguments:
     - __bin1__, a simple number that will serve as the first number in the equation.
 
     - __bin2__, another simple number that will serve as the second number in the equation.
 
     - __operation__, choose either multiplication (*), divison (/), addition (+), or subtraction(-) to act as the desired operation of the equation.
     
-    __*Do note that bin1 and bin2 must be passed in as strings and it's expected that the string passed is in binary. Only 1s and 0s with any number of digits.*__
+    __*Do note that bin1 and bin2 must be passed in as strings and it's expected that the string passed is in binary. Only 1s and 0s with any number of digits up to 8.*__
+
+## Converters
+
+This calculator comes with two converters for your convenience:
+
+1. __Binary to Decimal__. Call the *binary_to_decimal* function to convert a binary value into a decimal value.
+
+2. __Decimal to Binary__. Since there's no automatic decimal to binary, use the *decimal_to_binary* to convert your decimal to a binary before hand. 
+
+_Automatic decimal detection and conversion may be added later on._
 
 ## Error Detection
 
