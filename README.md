@@ -27,7 +27,7 @@ This calculator comes with a few checks to ensure that you recieve a real answer
 
 2. Only numbers can be passed in. Passing through any letter will result in an __Error__.
 
-3. Additonally, any resulting value that acceeds the [0,225] range will result in an __Overflow__.
+3. Additonally, any resulting value that acceeds the [0,255] range will result in an __Overflow__.
 
 <!--
 
