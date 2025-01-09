@@ -58,26 +58,21 @@ def binary_calculator(bin1, bin2, operator):
     # Proceeds with doing the actual operations.
     if operator == "*":
         result = num1 * num2
+    elif operator == "+":
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
     
     # Integrated a dividing by 0 check here.
     elif operator == "/":
         if num2 == 0:
             return "NaN"
         result = num1 // num2
-    elif operator == "+":
-        result = num1 + num2
-    elif operator == "-":
-        result = num1 - num2
-
-    return (decimal_to_binary(result).zfill(8))
-
-
     
-print(binary_calculator("00000100", "00000010", "/"))
+    # If the value of any result goes outside of the acceptable range, returns Overflow.
+    if result > 225 or result < 0:
+        return "Overflow"
 
+    # Turns the decimal back into binary while also adding any necessary leading 0s.
+    return (str(decimal_to_binary(result)).zfill(8))
 
-
-    # Checks if the denominator of a division problem is 0. Throws an error if it it.
-    # Will integrate it into the actual thing later on.
-    #if num2 == 0 and operator == '/':
-    #   return "NaN"
